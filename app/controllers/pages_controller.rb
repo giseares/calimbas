@@ -14,4 +14,7 @@ class PagesController < ApplicationController
 
   def aboutus; end
 
+  def education; end
+
+
 end
