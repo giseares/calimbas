@@ -1,121 +1,123 @@
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: auto;
+// HOME CARDS
+  .card-trip {
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: auto;
 
-  img {
-    height: 200px;
-    width: 100%;
-    object-fit:cover;
-  }
+      img {
+        height: 200px;
+        width: 100%;
+        object-fit:cover;
+      }
 
-  h2 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-  }
+      h2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+      }
 
-  p {
-    font-size: 12px;
-    opacity: .7;
-    margin: 0;
-  }
-  
-  .card-trip-infos {
-    padding: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-}
+      p {
+        font-size: 12px;
+        opacity: .7;
+        margin: 0;
+      }
+      
+      .card-trip-infos {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
 
-@media (max-width: 980px) {
-  /* For a screen < 720px, this CSS will be read */
-  .card-trip img{
-    width: 100%; 
-    height: auto;
-  }
- 
-}
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .card-trip img{
-    max-width: 100%; 
-    height: auto;
-    background-position: bottom;
-  }
-}
-
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  position: relative;
-
-  .text  {
-    text-align: center;
-    color: white;
-    position: absolute;
-    transition: all .3s;
-    transform: scale(1.5);
-    opacity: 0;
-  }
-
-  .text p {
-    font-size: 28px !important;
-  }
-
-  &:hover .text{
-    transform: scale(1);
-    opacity: 1;
-    text-decoration: none;
+    @media (max-width: 980px) {
+      /* For a screen < 720px, this CSS will be read */
+      .card-trip img{
+        width: 100%; 
+        height: auto;
+      }
     
-  }
-}
+    }
+    @media (max-width: 540px) {
+      /* For a screen < 540px, this CSS will be read */
+      .card-trip img{
+        max-width: 100%; 
+        height: auto;
+        background-position: bottom;
+      }
+    }
+
+    .card-category {
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      position: relative;
+
+      .text  {
+        text-align: center;
+        color: white;
+        position: absolute;
+        transition: all .3s;
+        transform: scale(1.5);
+        opacity: 0;
+      }
+
+      .text p {
+        font-size: 28px !important;
+      }
+
+      &:hover .text{
+        transform: scale(1);
+        opacity: 1;
+        text-decoration: none;
+        
+      }
+    }
 
 // CARDS PORTFOLIOS
-.card-category-portfolio {
-  background-size: cover;
-  background-position: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  justify-content: space-between;
-  flex-direction: column;
-  display: flex;
-
-  p{
-    font-weight: 100;
-    font-size: 12px;
-  }
-  
-  btn-holder {
-    justify-content: flex-end;
+  .card-category-portfolio {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    justify-content: space-between;
+    flex-direction: column;
     display: flex;
-  }
-}
 
-.cards{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  grid-gap: 16px;
-  flex-grow: 1;
-}
-  // MEDIA CARDS
+    p{
+      font-weight: 100;
+      font-size: 12px;
+    }
+    
+    btn-holder {
+      justify-content: flex-end;
+      display: flex;
+    }
+  }
+
+  .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-gap: 16px;
+    flex-grow: 1;
+  }
+
+// MEDIA CARDS
   @media(max-width: 992px) {
     .cards {
       grid-template-columns: 1fr 1fr;
@@ -129,136 +131,151 @@
 
 
 // CARDS BUCEO PRIMEROS AUXILIOS
-.cards-pa{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-  grid-gap: 16px;
-  flex-grow: 1;
-}
-
-@media(max-width: 992px) {
-  .cards-pa {
-    grid-template-columns: 1fr 1fr;
+  .cards-pa{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 16px;
+    flex-grow: 1;
   }
-}
 
-@media(max-width: 768px) {
-  .cards-pa {
-    grid-template-columns: 1fr;
+  @media(max-width: 992px) {
+    .cards-pa {
+      grid-template-columns: 1fr 1fr;
+    }
   }
-}
+
+  @media(max-width: 768px) {
+    .cards-pa {
+      grid-template-columns: 1fr;
+    }
+  }
 
 
 // CARDS PROJECT
-.card-proyect {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 16px;
-  color: white;
-  font-weight: bolder;
-  position: relative;
+  .card-proyect {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    flex-grow: 1;
 
-  .text  {
-    text-align: center;
-    position: absolute;
-    transition: all .3s;
-    transform: scale(1.5);
-    opacity: 0;
+    .text  {
+      text-align: center;
+      position: absolute;
+      transition: all .3s;
+      transform: scale(1.5);
+      opacity: 0;
+    }
+
+    &:hover .text{
+      transform: scale(1);
+      opacity: 1;
+      text-decoration: none;
+    }
   }
 
-  &:hover .text{
-    transform: scale(1);
-    opacity: 1;
-    text-decoration: none;
+  .ul-proyect li{
+    list-style: none;
   }
-}
-
-.ul-proyect li{
-  list-style: none;
-}
 
 
 // CARD PROJECT - ABOUTS US
-.container-aboutus{
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  .container-aboutus{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.card-about-us{
-  width: 200px;
-  margin: 10px;
-  transition: all 300ms;
-}
+  .card-about-us{
+    width: 200px;
+    margin: 10px;
+    transition: all 300ms;
+  }
 
-.card-about-us:hover{
-  width: 350px;
-}
+  .card-about-us:hover{
+    width: 350px;
+  }
+
+  .card-about-us .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+  
+
+  }
+  
+  .card-about-us .cover .imagen-aboutus{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+  }  
+
+  .card-about-us:hover .cover .imagen-aboutus{
+    top: 0px;
+    filter: none;
+  }
+
+  .card-about-us .image-back-aboutus{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+  }
+
+  .card-about-us .description{
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300m;
+    cursor: pointer;
+  }
+
+  .card-about-us:hover .description{
+    padding: 40px;
+  }
+
+  .card-about-us .description h2{
+    margin-top: 10px;
+
+  }
+
+  .card-about-us .description p{
+    margin-top: 10px;
+  }
 
 
-.card-about-us .cover{
-  width: 100%;
-  height: 250px;
-  position: relative;
-  overflow: hidden;
- 
+// EDUCATION CARDS
+  .cards-education {
+    width: 1200px;
+  }
 
-}
- 
-.card-about-us .cover .imagen-aboutus{
-  width: 250px;
-  display: block;
-  margin: auto;
-  position: relative;
-  top: 40px;
-  z-index: 1;
-  filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
-  transition: all 400ms;
-}  
+  .card-educations{
+    position: relative;
+  }
 
-.card-about-us:hover .cover .imagen-aboutus{
-  top: 0px;
-  filter: none;
-}
-
-.card-about-us .image-back-aboutus{
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  bottom: -80px;
-  left: 0;
-  background-size: cover;
-  border-radius: 20px;
-  transition: all 300ms;
-}
-
-
-.card-about-us .description{
-  background: white;
-  margin-top: -10px;
-  padding: 20px;
-  border-radius: 0px 0px 20px 20px;
-  transition: all 300m;
-  cursor: pointer;
-}
-
-.card-about-us:hover .description{
-  padding: 40px;
-}
-
-.card-about-us .description h2{
-  margin-top: 10px;
-
-}
-
-.card-about-us .description p{
-  margin-top: 10px;
-}
+  .icon{
+    width: 100%;
+    height: 220px;
+    background-color: rgb(230,230,230);
+  }
