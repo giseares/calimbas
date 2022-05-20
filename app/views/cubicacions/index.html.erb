@@ -1,0 +1,32 @@
+<div class="container mt-5 ">
+  <h1> Cubicaciones </h1>
+  <div class="container m-5 ">
+    <h3 "mt-5"> Ultima Cubicacion </h3>
+    Modelo: <%= @cubicacions.last.modelo %>
+    <br>
+    Patente: <%= @cubicacions.last.patente %>
+    <br>
+    Volumen de Camara de Compresion: <%= @cubicacions.last.vol_camara_compresion %>
+    <br>
+    <br>
+    
+    <ul> Datos:
+      <li> Volumen Total: <%= @cubicacions.last.vol_total %> </li>
+      <li> Volumen Tapa: <%= @cubicacions.last.vo_tapa %> </li>
+      <li> Volumne Bajo Block: <%= @cubicacions.last.vo_bajo_block %> </li>
+      <li> Volumen Junta: <%= @cubicacions.last.vol_junta %> </li>
+      <div class="container mt-1 ">
+        <li> Junta de Diamentro:<%= @cubicacions.last.junta_diametro %></li>
+        <li> Junta Espesor: <%= @cubicacions.last.junta_espesor %></li>
+      </div>             
+      <li> Cilindrada Unitaria: <%= @cubicacions.last.cilindrada_unitaria %> </li>
+        <div class="container mt-1 ">
+          <li> Cilindro Diametro: <%= @cubicacions.last.cil_diametro %> </li>
+          <li> Carrea de Piston: <%= @cubicacions.last.cil_carrera_de_piston %></li>
+        </div> 
+    </ul>  
+  </div>
+  <div class="container mt-1 ">
+    <%= link_to "Realizar una nueva cubicacion", new_cubicacion_path , :class => "btn btn-success"%>
+  </div>
+</div>

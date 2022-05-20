@@ -11,6 +11,12 @@ require "open-uri"
 puts "Limpiando la DB..."
 Portfolio.destroy_all
 
+
+
+puts "Creando Servicios..."
+Cubicacion.create!(vo_tapa: 27.6, vo_bajo_block: 25, vol_junta: 7.44, vol_total: 60.04, cilindrada_unitaria: 399.67, vol_camara_compresion: 7.65, cil_diametro: 7.65, cil_carrera_de_piston: 8.7, junta_diametro: 7.77, junta_espesor: 0.16) 
+
+
 puts "Creando Servicios..."
 file = URI.open('https://res.cloudinary.com/giseares/image/upload/v1632258593/prd_design_daria-nepriakhina_01_mlgtig')
 design = Portfolio.create!(

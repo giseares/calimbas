@@ -1,0 +1,15 @@
+<h1> Ingresar una nueva Cubicacion </h1 >
+<div class="container">
+  <%=simple_form_for @cubicacion do |form| %>
+    <%= form.input :modelo %>
+    <%= form.input :patente %>
+    <%= form.input :vo_tapa, label:"Indicar Volumen de Tapa" %>
+    <%= form.input :vo_bajo_block, label:"Indicar Volumen Bajo Block" %>
+    <%= form.input :junta_diametro, label:"Indicar Diamentro de Junta" %>
+    <%= form.input :junta_espesor, label:"Indicar Espesor de Junta" %>
+    <%= form.input :cil_diametro, label:"Indicar Diametro de Cilindro" %>
+    <%= form.input :cil_carrera_de_piston, label:"Indicar Carrera de Piston" %>
+    <%= form.submit %>
+
+  <% end  %>
+</div>

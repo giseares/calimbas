@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_21_144459) do
+ActiveRecord::Schema.define(version: 2022_05_18_210132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,25 @@ ActiveRecord::Schema.define(version: 2021_11_21_144459) do
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "cubicacions", force: :cascade do |t|
+    t.float "vo_tapa"
+    t.float "vo_bajo_block"
+    t.float "vol_junta"
+    t.float "vol_total"
+    t.float "cilindrada_unitaria"
+    t.float "vol_camara_compresion"
+    t.float "cil_diametro"
+    t.float "cil_carrera_de_piston"
+    t.float "junta_diametro"
+    t.float "junta_espesor"
+    t.float "datos_pi", default: 3.14
+    t.float "datos_divisor", default: 4.0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "patente"
+    t.string "modelo"
   end
 
   create_table "portfolios", force: :cascade do |t|
