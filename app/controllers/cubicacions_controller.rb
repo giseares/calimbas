@@ -28,8 +28,8 @@ class CubicacionsController < ApplicationController
     @cubicacion.vol_total =  (@cubicacion.vol_junta + vol_tapa + vo_bajo_block).round(2)
     @cubicacion.vol_camara_compresion = ((@cubicacion.vol_total + @cubicacion.cilindrada_unitaria )/@cubicacion.vol_total).round(2)
     
-    if !@cubicacion.save
-      redirect_to cubicacions_path, notice: "Se ha grababado el caso"
+    if @cubicacion.save
+      redirect_to cubicacions_path, notice: "Suscribite a nuestro canal de youtube"
     else
       render :new
     end

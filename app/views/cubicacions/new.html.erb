@@ -3,6 +3,10 @@
     <div class= "text-center">
       <h1>Cubicaciones</h1>
       <p>Calcula el Volumen de Cámara de Compresión.</p>
+      <div class="mt-1">
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <div class="g-ytsubscribe" data-channelid="UC6gKILvZxRGYUyy86tbJ9VA" data-layout="default" data-count="hidden"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -19,9 +23,11 @@
       <%= form.input :junta_espesor, label:"Indicar Espesor de Junta" %>
       <%= form.input :cil_diametro, label:"Indicar Diametro de Cilindro" %>
       <%= form.input :cil_carrera_de_piston, label:"Indicar Carrera de Piston" %>
-      <%= form.submit 'Calcular' %>
+      <%= form.submit 'Calcular', :class => "btn btn-success" %>
 
     <% end  %>
   </div>
+  <%= link_to "Volver", cubicacions_path , :class => "btn btn-danger" %>
+
 </div>
 
