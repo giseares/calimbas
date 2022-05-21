@@ -14,6 +14,7 @@ class CubicacionsController < ApplicationController
 
   def create
     @cubicacion = Cubicacion.new(cubicacion_params)
+
     cil_diametro = @cubicacion.cil_diametro
     cil_carrera = @cubicacion.cil_carrera_de_piston
     junta_diametro = @cubicacion.junta_diametro
@@ -26,12 +27,13 @@ class CubicacionsController < ApplicationController
 
     @cubicacion.vol_total =  (@cubicacion.vol_junta + vol_tapa + vo_bajo_block).round(2)
     @cubicacion.vol_camara_compresion = ((@cubicacion.vol_total + @cubicacion.cilindrada_unitaria )/@cubicacion.vol_total).round(2)
-
-    if @cubicacion.save 
-      redirect_to cubicacions_path
+    
+    if !@cubicacion.save
+      redirect_to cubicacions_path, notice: "Se ha grababado el caso"
     else
       render :new
     end
+   
  
   end
 

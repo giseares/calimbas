@@ -1,15 +1,27 @@
-<h1> Ingresar una nueva Cubicacion </h1 >
-<div class="container">
-  <%=simple_form_for @cubicacion do |form| %>
-    <%= form.input :modelo %>
-    <%= form.input :patente %>
-    <%= form.input :vo_tapa, label:"Indicar Volumen de Tapa" %>
-    <%= form.input :vo_bajo_block, label:"Indicar Volumen Bajo Block" %>
-    <%= form.input :junta_diametro, label:"Indicar Diamentro de Junta" %>
-    <%= form.input :junta_espesor, label:"Indicar Espesor de Junta" %>
-    <%= form.input :cil_diametro, label:"Indicar Diametro de Cilindro" %>
-    <%= form.input :cil_carrera_de_piston, label:"Indicar Carrera de Piston" %>
-    <%= form.submit %>
-
-  <% end  %>
+<div class="banner_central" alt= "CubicacionsNew Banner Inicial - @combicalimba" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path "cubicacionsNew_baner_inicial_combicalimba" %>')">
+  <div class="container">
+    <div class= "text-center">
+      <h1>Cubicaciones</h1>
+      <p>Calcula el Volumen de Cámara de Compresión.</p>
+    </div>
+  </div>
 </div>
+
+<div class="container text-center my-5">
+  <h1> Realizar un nuevo cálculo </h1 >
+  <div class= "mt-3 text-left">
+    <%=simple_form_for @cubicacion do |form| %>
+      <%= form.input :modelo %>
+      <%= form.input :patente %>
+      <%= form.input :vo_tapa, label:"Indicar Volumen de Tapa" %>
+      <%= form.input :vo_bajo_block, label:"Indicar Volumen Bajo Block" %>
+      <%= form.input :junta_diametro, label:"Indicar Diamentro de Junta" %>
+      <%= form.input :junta_espesor, label:"Indicar Espesor de Junta" %>
+      <%= form.input :cil_diametro, label:"Indicar Diametro de Cilindro" %>
+      <%= form.input :cil_carrera_de_piston, label:"Indicar Carrera de Piston" %>
+      <%= form.submit 'Calcular' %>
+
+    <% end  %>
+  </div>
+</div>
+
