@@ -16,7 +16,7 @@ class PagesController < ApplicationController
 
   def education; end
 
-  def cubicacion; end
+  def services; end
 
 
 end

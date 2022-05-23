@@ -28,20 +28,24 @@
         <%= link_to "El Proyecto", project_path , class: "nav-link" %>
       </li>
 
-          <li class="nav-item">
+      <li class="nav-item">
         <%#= link_to "Blog", articles_path , class: "nav-link" %>
       </li>
-      
-     <!--
-      <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+      <li class="nav-item dropdown" >
+        <%= cl_image_tag "E_szkcns", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
-          <p class: "pl-3"> otra accion <p>
+          <%= link_to "Servicio a Empresas", empresas_path ,  class: "dropdown-item" %>
+          <%#= link_to "Salir", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <%#= link_to "Ingresar", user_session_path, class: "dropdown-item" %>
         </div>
       </li>
-      -->
+      
+      <li class="nav-item">
+      
+      </li>
+      
+     
     </ul>
   </div>
 </div>

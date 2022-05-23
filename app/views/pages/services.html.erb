@@ -1,0 +1,84 @@
+<!--BANNER INICIAL-->
+<div class="banner_central" alt= "Servicios Banner Inicial - @phAmelieMmourichon/Unplash" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path "servicios_banner_amelie-mourichon" %>')">
+  <div class="container">
+    <div class= "text-center">
+      <h1>Servicios</h1>
+      <p>Accede a nuestras paginas personalizadas para resolver pequeños problemas</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-5">
+  <div class="text-center mb-5">
+    <h2>Servicios Disponibles</h2>
+  </div>
+
+  <div class="row d-flex justify-content-around alert-tex">
+    <div class="col-12 col-lg-3 card-trip p-2">
+      <%= link_to cl_image_tag("cubicacionsNew_baner_inicial_combicalimba", alt:"Taller - ph: @Calimba", class:"rounded imagen-coach", :border=>0), cubicacions_path %>
+      <div class="card-trip-infos">
+        <div>
+          <h5 class= "m-2 text-center"><strong>Cubicaciones</strong></h5>
+          <p class ="text-center">La relación de compresión es un concepto de máxima importancia en la preparación de motores. La precisión con que se miden los volúmenes para el cálculo de la relación de compresión es algo que se debe tener muy presente cuando se instala un eje de levas de competencia. </p>
+        </div>
+      </div>
+      <div class= "d-flex align-items-end justify-content-center">
+        <% if current_user.workshop == "TallerNico" %>
+          <%= link_to "Accede", cubicacions_path, class: "btn btn-outline-success" %> 
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-3 card-trip p-2">
+      <%= link_to cl_image_tag("servicios_renata-adrienn", alt:"Agenda - ph: @RenataAdrienn", class:"rounded imagen-coach", :border=>0) %>
+      <div class="card-trip-infos">
+        <div>
+          <h5 class= "m-2 text-center"><strong>Coaching</strong></h5>
+          <p class ="text-center">Agenda tus sesiones de coaching para tu empresa</p>
+        </div>
+      </div>
+      <div class= "d-flex align-items-end justify-content-center">
+        <% if current_user.workshop == "Coaching" %>
+          <%= link_to "Accede", cubicacions_path, class: "btn btn-outline-success" %> 
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-3 card-trip p-2">
+      <%= link_to cl_image_tag("login_unsplash_nina-mercado", alt:"Taller - ph: @NinaMErcado", class:"rounded imagen-coach", :border=>0) %>
+      <div class="card-trip-infos">
+        <div>
+          <h5 class= "m-2 text-center"><strong>Taller</strong></h5>
+          <p class ="text-center">Gestiona tu taller, reparaciones e informaion de todos tus autos</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class= "d-flex align-items-end justify-content-center">
+        <% if current_user.workshop == "TallerNico" %>
+          <%= link_to "Accede", cubicacions_path, class: "btn btn-outline-success" %> 
+        <% end %>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div class="text-center my-5">
+  <h4>Queres Conocer mas de nuestros servicios?</h4>
+  <a class="btn btn-outline-warning btn-lg mr-3"  target="_blank" href="https://api.whatsapp.com/send?phone=5491153842626">WhatsApp</a>
+  <%= link_to "Desloguearse", destroy_user_session_path, method: :delete, class: "btn btn-outline-dark" %>
+  
+
+</div>
+
+
+
+
+
+
+

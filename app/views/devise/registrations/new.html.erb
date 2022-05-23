@@ -1,31 +1,39 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :phone,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "WhatsApp" }%>
-    <!--
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    -->
+<!--BANNER INICIAL-->
+<div class="banner_central" alt= "Coaching Banner Inicial - @phjamiestret/Unplash" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path "coaching_baner_inicial_unsplash_jamie_street_mvoopq" %>')">
+  <div class="container">
+    <div class= "text-center">
+      <h1>Crea tu usuario</h1>
+      <p>Accede a nuestros servicios a Empresas.</p>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
+<div class="container">
+  <h2 class="mt-3">Genera tu usuario</h2>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      
+      <%= f.input :email, 
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} caracteres minimos" if @minimum_password_length),
+                  input_html: { autocomplete: "nuevo-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "nuevo-password" } %>
+      <%= f.input :workshop, collection: User::WORKSHOP, label:"Empresa",
+              required: true,
+              autofocus: true,
+              input_html: { autocomplete: "Taller" }%>  
+   
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Generar",:class => "btn btn-success" %>
+    </div>
+  <% end %>
+</div>
 <%= render "devise/shared/links" %>
