@@ -9,10 +9,9 @@
 </div>
 
 
-
 <!--CONOCENOS-->
-<div class="container text-center mt-3">
-  <h2>Conoce a los tripulantes de Calimba</h2>
+<div class="container">
+  <h2 class="text-center m-5">Conocé a los tripulantes de Calimba</h2>
 </div>
 <div class="container-aboutus">
   <div class="card-about-us">
@@ -42,7 +41,7 @@
     </div>
     <div class="description">
       <h2>Gaspar</h2>
-      <p>Un salchicha arlequín de 12 años con mucho carácter y que sabe pedir lo que quiere. Es la alarma de la Combi, siempre nos cuida.</p>
+      <p>Un salchicha arlequín de 13 años con mucho carácter y que sabe pedir lo que quiere. Es la alarma de la Combi, siempre nos cuida.</p>
     </div>
     <br>
   </div>
@@ -53,64 +52,17 @@
     </div>
     <div class="description">
       <h2>Duke</h2>
-      <p>Un Doberman marron de orejas largas de 6 años. Un dulce de leche. Le encanta viajar y estar dentro de Calimba</p>
+      <p>Un Doberman marron de orejas largas de 10 años. Un dulce de leche. Le encanta viajar y estar dentro de Calimba</p>
     </div>
-  </div>
-</div>
-<div class = "ondas">
-  <div  style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-2.25,107.06 C149.99,150.00 547.96,159.38 500.00,49.98 L500.00,150.00 L-5.07,153.45 Z" style="stroke: none; fill: #005A8D;"></path></svg>
   </div>
 </div>
 
-<!--El Proyecto-->
-<div class="container my-5">
-  <h3 class="text-left">El proyecto nace con 3 objetivos basicos:</h3> 
-  <div>
-    <ol>
-      <li>Llevar el buceo a toda Ámerica</li>
-      <li>Impartir cursos de primeros auxilios</li>
-      <li>Charlas de Medio Ambiente</li>
-    </ol>
-  </div>
-  <h3 class="text-left">Quienes son los beneficiarios de nuestro proyecto:</h3> 
-  <ul>
-    <ol><strong>Personas con acceso limitado a herramientas de sanidad</strong>, talleres de primeros auxilios a docentes de escuela rural, grupos de vulnerabilidad y e interesados en aprender</ol>
-    <ol><strong>Personas con movilidad reducida, hipoacusticos</strong>. Brindado una nueva oportunidad de sentirse completos.</ol>
-    <ol><strong>Fuerzas Publicas</strong>. Charlas y revalidas a la fuerzas de seguridad</ol>
-    <ol><strong>Divecenters:</strong> promoveremos el deporte contando los beneficios del mismo. Trabajo en conjunto para potenciar el divecenters y trabajando en especialidades que no tenga el centro</ol>
-  </ul>
-  <div class="cards">
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion3_comunidad_aslc7u" %>')"> 
-      <div class="text"> 
-        <p>Pto Madryn - Arg Abr/19</p>
-      </div> 
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion3_bomberos_gglqf2" %>')"> 
-      <div class="text"> 
-        <p>Mte Caseros - Arg Ago/19</p>
-      </div> 
-    </div>  
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion3_niños_qhdiwx" %>')"> 
-      <div class="text"> 
-        <p>Cordoba - Arg Jul/19</p>
-      </div> 
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion3_empresas_hknbzs" %>')"> 
-      <div class="text"> 
-        <p>Chaco - Arg Sep/19</p>
-      </div> 
-    </div>  
-  </div>
-</div>
-
-<div  style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-2.25,107.06 C149.99,150.00 547.96,159.38 500.00,49.98 L500.00,150.00 L-5.07,153.45 Z" style="stroke: none; fill: #005A8D;"></path></svg>
-</div>
 
 <!--GARLLERY-->
 <div class="banner-white py-5">
-  <h2 class= "pl-2">Conoce nuestro recorrido!!</h2>
+  <h2 class= "pl-2 text-center m-5">Conocé nuestro recorrido!!</h2>
   <div class="gallery-container">
-    <p class= "text-center align-center"> <br>Después de haber conocido los cuatro continentes por tierra y agua, decidimos recorrer nuestro continente por tiempo completo en Kombi, no dejes de seguir nuestra aventura viajera en <strong><a href="https://www.instagram.com/combicalimbaok/" style = "color: black" target="_blank">@combicalimba</a></strong></p>
+    <p class= "text-center align-center"> <br>Después de haber conocido los cuatro continentes por tierra y agua, decidimos recorrer nuestro continente por tiempo completo en Kombi, no dejes de seguir nuestra aventura viajera en <strong><a href="https://www.instagram.com/combicalimbaok/" style = "color: black" target="_blank">@combicalimbaok</a></strong></p>
     <%  @portfolios_gallery.each do |p| %>
       <div class="gallery-item">
         <%= cl_image_tag p.photo.key, :class=>"gallery-img" %>
@@ -121,76 +73,10 @@
 </div>
 
 
- <div class = "ondas banner-white">
-  <div  style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-2.25,107.06 C149.99,150.00 547.96,159.38 500.00,49.98 L500.00,150.00 L-5.07,153.45 Z" style="stroke: none; fill: #005A8D;"></path></svg>
-  </div>
-</div>
-
-
-
-<!--En Los Medios-->
-
-<div class="container my-5 ">
-  <h3 class="text-left">Calimba en los medios:</h3> 
-  <p>Un resumen rapido de las notas que nos hicieron</p>
-  <div class="cards">
-    <div class="card-proyect flex-fill" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_sez_sgu0vx" %>')">
-      <div class="text"> 
-        <%= link_to "Saenz Peña - Dic-2021", "https://bit.ly/31HZ6BC", target: "_blank", alt: "Diario Chaco" %>
-      </div> 
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_abc_rtrow1" %>')">
-      <div class="text"> 
-        <%= link_to "Piribebuy - Paraguay", "https://bit.ly/3CB0ovo", target: "_blank", alt: "Nota ABC" %>
-      </div> 
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_mte_vhsvka" %>')">
-      <div class="text"> 
-        <%= link_to "Monte Caseros - Argentina", "https://bit.ly/3lDuKqs", target: "_blank", alt: "Nota MonteCaseros" %>
-      </div> 
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_rdn_ztqx8u" %>')">
-      <div class="text"> 
-        <%= link_to "Asuncion - Paraguay", "https://bit.ly/3tWgmgN", target: "_blank", alt: "Nota RDN" %>
-      </div>
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_santafe_bovyab" %>')">
-      <div class="text"> 
-        <%= link_to "Sunchales - Argentina", "https://bit.ly/3EBqvEp", target: "_blank", alt: "Nota RDN" %>
-      </div> 
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_saenz_vxwzeq" %>')">
-      <div class="text"> 
-        <%= link_to "Saenz Peña- Argentina", "https://bit.ly/3zEh9UZ", target: "_blank", alt: "Nota RDN" %>
-      </div> 
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_mte2_xbsxoq" %>')">
-      <div class="text"> 
-        <%= link_to "Corrientes - Argentina", "https://bit.ly/3kuDEHA", target: "_blank", alt: "Diario Online" %>
-      </div>
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_mt3_xl6gna" %>')">
-      <div class="text"> 
-        <%= link_to "Saenz Peña- Argentina", "https://bit.ly/3ztRle7", target: "_blank", alt: "Diario Chaco" %>
-      </div> 
-    </div>
-    <div class="card-proyect" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "proyecto_seccion_4_noticias_todas_ipg7ow" %>')">
-      <div class="text"> 
-        <%= link_to "Busqueda en Google", "https://bit.ly/3Atg6s3", target: "_blank", alt: "Resultado Google" %>
-      </div> 
-    </div>
-  </div>
-</div>
-
-<div  style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-2.25,107.06 C149.99,150.00 547.96,159.38 500.00,49.98 L500.00,150.00 L-5.07,153.45 Z" style="stroke: none; fill: #005A8D;"></path></svg>
-</div>
-
-
-
 <!--Nuestros Logros-->
 <div class = "banner-white pt-5">
   <div class="container">
-    <h2>Nuestros Logros</h2>
+    <h2 class="text-center m-5">Conocé nuestros Logros</h2>
     <div class="achivements">
       <div class="card card-hits text-center">
         <div class="card-body">
@@ -286,8 +172,7 @@
     </div>
   </div>
 
-  <div  style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-2.25,107.06 C149.99,150.00 547.96,159.38 500.00,49.98 L500.00,150.00 L-5.07,153.45 Z" style="stroke: none; fill: #005A8D;"></path></svg>
-  </div>
+
 </div>
 
 
