@@ -9,90 +9,61 @@
 </div>
 
 <!--DESARROLLO PROFESIONAL-->
-<div class="banner_curso_profesional">
-  <div class="container">
+<div class="container mt-5">
+  <div id="formacion">
     <div class= "text-center">
       <h2>Formación Profesional</h2>
-      <p>Orientada a Empresas</p>
     </div>
   </div>
 </div>
 
-<!--DESARROLLO PROFESIONAL - CARDS-->
-<div class="container">
-  <div class="cards">
-    <%  @portfolios_profesional.each do |p| %>
-      <div class="card-category-portfolio text-center" alt= "Portfolio ph: <%= p.url_image %>/Unsplash" style="background-image: linear-gradient(rgba(51,60,135,0.3), rgba(51,60,135,0.9)), url(<%= cl_image_path p.photo.key %>)">
-        <h3><%= p.name %></h3>
-        <p><%= p.content %></p>
-        <div class="btn-holder">
-          <a class="btn btn-outline-success mb-2"  target="_blank" href="https://api.whatsapp.com/send?phone=5491153842626&text=<%= p.name %>%20-%20Quiero%20mi%20programa">Pedi tu programa</a>       
-        </div>
-      </div>
-    <% end %>
+<div class="container my-5 text-center white-portfolios">
+  <div class="white-portfolios">
+    <p>
+    ¿Quieres que tu empresa tenga una ventaja competitiva? ¿Quieres que tus empleados estén mejor preparados y más capacitados que los de la competencia? ¡Tenemos la solución perfecta para ti!
+    </p>
+    <p>
+    En Calimba, ofrecemos una amplia variedad de cursos online para empresas que ayudarán a tus empleados a desarrollar habilidades clave y mejorar su rendimiento laboral. Nuestros cursos están diseñados para adaptarse a las necesidades específicas de tu empresa, brindando capacitación en áreas como liderazgo, trabajo en equipo, comunicación, habilidades técnicas, entre otros.
+    </p>
   </div>
 </div>
 
+
+<!--DESARROLLO PROFESIONAL - CARDS-->
+
+<div class="container mb-5 ">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+          <% @portfolios_profesional.each_with_index do |p, index| %>
+            <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
+              <%= cl_image_tag (p.photo.key unless p.photo.key.blank?), width: 400, height: 400, class: 'd-block w-100'%> 
+              <div class="carousel-caption d-none d-md-block">
+                <h3><%= p.name %></h3>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</div>
 
 <!--CONSULTORIA-->
 <div id="consultoria">
-  <div class="banner_curso_profesional">
-    <div class="container">
-      <div class= "text-center">
-        <h2>Consultoría</h2>
-        <p>Conoce nuestra propuesta de consultoría integral</p>
-      </div>
-    </div>
+  <div class="container">
   </div>
 </div>
+
+
+
 
 <!--CONSULTORIA - CARDS-->
-<div class="container mb-5 ">
-  <div class="cards">
-    <%  @portfolios_consultoria.each do |p| %>
-      <div class="card-category-portfolio text-center" alt= "Portfolio ph: <%= p.url_image %>/Unsplash" style="background-image: linear-gradient(rgba(51,60,135,0.3), rgba(51,60,135,0.9)), url('<%= cl_image_path p.photo.key%>')">
-        <h3><%= p.name %></h3>
-        <p><%= p.content %></p>
-        <div class="btn-holder">
-          <a class="btn btn-outline-success mb-2"  target="_blank" href="https://api.whatsapp.com/send?phone=5491153842626&text=<%= p.name %>%20-%20Quiero%20mi%20programa">Pedi tu programa</a>       
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
 
-<h3> container </h3>
-<div class="cards-carousel">
-  <div class="card-carousel">
-    <div class="iconos">
-      <p> image1 </p>
-    </div> 
-  
-    <div  class= descirpcion>
-      <p> lorem1  </p>
-      <a class="btn btn-outline-success mb-2"  target="_blank" href="https://api.whatsapp.com/send?phone=5491153842626&">Pedi tu programa</a>       
-    </div>
-  </div>
-
-    <div class="card-carousel">
-    <div class="iconos">
-      <p> image2 </p>
-    </div> 
-  
-    <div  class= descirpcion>
-      <p> lorem2  </p>
-      <a class="btn btn-outline-success mb-2"  target="_blank" href="https://api.whatsapp.com/send?phone=5491153842626&">Pedi tu programa</a>       
-    </div>
-  </div>
-
-    <div class="card-carousel">
-    <div class="iconos">
-      <p> image3 </p>
-    </div> 
-  
-    <div  class= descirpcion>
-      <p> lorem3  </p>
-      <a class="btn btn-outline-success mb-2"  target="_blank" href="https://api.whatsapp.com/send?phone=5491153842626&">Pedi tu programa</a>       
-    </div>
-  </div>
-</div>
+      <%# @portfolios_consultoria.each_with_index do |p, index| %>
+    

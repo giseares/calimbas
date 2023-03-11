@@ -1,5 +1,5 @@
 class CubicacionsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index new create] 
+  skip_before_action :authenticate_user!#, only: %i[index new create] 
   def index
     @cubicacions = Cubicacion.all
   end
